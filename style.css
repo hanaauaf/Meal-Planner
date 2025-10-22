@@ -1,0 +1,967 @@
+html {
+  scroll-behavior: smooth;
+}
+/* defining colors for easy change */
+:root {
+    --primary: #FF8C00;       /* rich orange */
+    --primary-light: #fdae37; /* peachy highlight */
+    --secondary: #2E7D32;     /* fresh green */
+    --background: #f7f7f7;    /* creamy white */
+    --text: #2C2C2C;          /* soft dark gray */
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color:var(--background);
+    color:var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+/*headings font-family*/
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    color:var(--text);
+}
+/* links */
+a{
+    color: var(--primary);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--secondary);
+}
+/* buttons default  */
+.btn{
+    background-color: var(--primary);
+    border:none;
+    color:#fff;
+    font-weight: 600;
+    border-radius: 8px;
+    padding:0.6rem 1.2rem;
+    transition:background-color 0.3s ease;
+}
+.btn:hover{
+    background-color: var(--secondary);
+    color:#fff;
+}
+/* hover effects  */
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* Navigation section  */
+.navbar {
+  background-color: var(--secondary); /* green instead of orange */
+  padding: 1rem 2rem;
+  border-radius: 0 0 20px 20px; /* soft bottom curve */
+}
+
+.navtitle{
+  color: #fff;
+  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.navtitle:hover {
+  color: var(--primary-light);
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-light) !important;
+}
+
+/* dark mode button (round, clean look) */
+.theme-toggle-btn {
+  background-color: #fff;
+  color: var(--secondary);
+  border: none;
+  border-radius: 50%;
+  padding: 6px 9px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--primary-light);
+  color: #fff;
+}
+
+
+/* Hero section  */
+.hero {
+  position: relative;
+  background: url('../images/download\ \(37\).jpeg') center/cover no-repeat;
+  border-radius: 12px;
+  margin-top: 130px; 
+  min-height: 375px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background-color: rgba(0,0,0,0.4); /* dark overlay for readability */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 1rem;
+}
+
+.hero-title {
+  color:white;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Nunito',sans-serif;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+.hero .btn {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  font-family: 'Nunito',sans-serif;
+  transition: 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: var(--primary-light);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Features section  */
+.features {
+  background-color: #ddf0e3; /* light greenish cream */
+  padding: 80px 20px;
+  border-radius: 12px;
+  margin: 0 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.features h2 {
+  color:var(--secondary);/* green title */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 50px;
+}
+
+.features p.text-muted {
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+/* feature cards */
+.features .card {
+  border: none;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  background: linear-gradient(145deg, #ffffff, #f7f9f6); /* subtle gradient */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,background 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  position: relative;
+  text-align: center; /* center content */
+}
+.features .row > .col-md-3:nth-child(odd) .card {
+  margin-top: 20px; /* adjusts how much higher odd cards are */
+}
+/* hover effect */
+.features .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  background: linear-gradient(145deg, #f0fff0, #afd8af);
+}
+
+/* icon circle wrapper */
+.features .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255,140,0,0.2); 
+  color: var(--secondary); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto; 
+  font-size: 1.8rem; 
+  
+}
+
+/* card title */
+.features .card h5 {
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* card text */
+.features .card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+/* How it works section */
+.how-it-works {
+  background-color: #ddf0e3; /* light greenish tint */
+  padding: 100px 20px;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.how-it-works h2 {
+  color: var(--secondary);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.how-it-works p.text-muted {
+  text-align: center;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+/* Steps cards */
+.how-it-works .card {
+  border: none;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.how-it-works .card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Icon circle */
+.how-it-works .card i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light), #ffe6b3); /* soft gradient */
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Only background changes on hover */
+.how-it-works .card:hover i {
+  transform: scale(1.1);
+  background-color: var(--secondary); /* green background */
+  color: #fff; /* icon turns white */
+}
+.how-it-works .card:hover i {
+  transform: scale(1.1);
+  background-color: var(--secondary); /* green hover */
+  color: #fff;
+}
+
+/* Card titles */
+.how-it-works .card h5 {
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+/* Card text */
+.how-it-works .card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Testimonials section  */
+.testimonials {
+  background-color: #ddf0e3;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: var(--secondary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.testimonials p.text-muted {
+  margin-bottom: 3rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.testimonials img {
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.testimonials .lead {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+
+
+
+/* Call to action button */
+.CTA {
+  background: var(--secondary);
+  border-radius: 12px; /* slightly bigger radius for modern feel */
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  margin-bottom: 100px; /* reduced a bit for spacing balance */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* subtle shadow for depth */
+}
+
+.CTA h2 {
+  font-size: 2.2rem; /* slightly larger */
+  margin-bottom: 1.5rem;
+}
+
+.CTA .btn {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-family: 'Nunito',sans-serif;
+  transition: 0.3s ease;
+}
+
+.CTA .btn:hover {
+  background-color: var(--primary-light);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Footer section  */
+footer {
+    background-color: #2C2C2C;
+    color: #fff;
+    font-size: 1.2rem; /* slightly smaller for elegance */
+    text-align: center;
+    padding: 25px 20px; /* a bit more vertical padding */
+}
+
+footer a {
+    color: var(--primary-light);
+    text-decoration: none; /* remove underline */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* ABout Page intro section */
+#aboutIntro {
+  background-color: #ddf0e3;
+  padding: 100px 20px;
+  text-align: center;
+  margin-top:100px;
+  border-radius: 12px;
+}
+
+#aboutIntro h1 {
+  color: var(--secondary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#aboutIntro p.lead {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Mission Section */
+#mission {
+  background-color: #ddf0e3;
+  padding: 100px 20px;
+  text-align: center;
+  margin-top: 100px;
+  border-radius: 12px;
+}
+
+#mission .card {
+  background: #f9fefb;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mission .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+#mission h2 {
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#mission .card p{
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Why Section */
+#why {
+  background-color: #ddf0e3;
+  padding: 100px 20px;
+  text-align: center;
+  margin-top:100px;
+  border-radius: 12px;
+}
+
+#why h2 {
+  color: var(--secondary);
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+#why .card-body {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#why .card-body:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+#why p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+
+/* Team Section */
+.team {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  margin-top:100px;
+}
+
+.team h2 {
+  color: var(--secondary);
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.team-member {
+  background: #ddf0e3;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.team-member i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  background-color: rgba(255, 165, 0, 0.15); /* soft orange background */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+.team-member h5 {
+  color: var(--secondary);
+  font-weight: 600;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-member {
+  animation: fadeUp 0.8s ease both;
+}
+/* FAQ Section */
+.faq {
+  background-color: #ddf0e3;
+  padding: 100px 20px;
+  border-radius: 12px;
+}
+
+.faq h2 {
+  color: var(--secondary);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.faq-item:hover {
+  background-color: #f8fdf9;
+  border-left: 5px solid var(--primary);
+}
+
+
+.faq-question {
+  color: var(--secondary);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  display: none;
+  color: #444;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* Optional: simple arrow animation */
+.faq-item .arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(90deg);
+}
+
+/* Login page  */
+.auth-section {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-card {
+  background: #afd8af;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.auth-card h2 {
+  color: var(--secondary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.auth-card .form-control {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+}
+
+.auth-card .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.1);
+}
+
+.auth-card .btn {
+  background-color: #fd7e14;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.auth-card .btn:hover {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.auth-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Error text styling */
+.auth-card small.text-danger {
+  display: block;
+  text-align: left;
+  margin-top: 5px;
+}
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px; /* ⬆ adds space from Login button */
+  margin-bottom: 15px; /* ⬇ optional space before next section */
+}
+
+/* For smaller screens */
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* dashboard  */
+.dashboard-section h1,
+.dashboard-section h2,
+.dashboard-section h3 {
+    color: var(--secondary);
+    font-weight: 700;
+}
+.dashboard-section .container{
+  margin-top: 100px;
+}
+/* Weekly Planner */
+.planner-day {
+  background: #afd8af; /* override Bootstrap background */
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  min-height: 100px;
+  font-weight: 600;
+}
+.planner-day:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  border-left: 5px solid var(--primary);
+}
+.planner-day.selected-day {
+    border: 2px solid #fd7e14;
+    background-color: #fff8f0;
+    box-shadow: 0 8px 20px rgba(253,126,20,0.2);
+}
+/* Meals */
+.meal-card {
+  background: #afd8af !important;
+  border-radius: 20px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 20px !important;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-align: center;
+  margin-top:10px;
+}
+.meal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+.meal-card.highlighted {
+    border: 2px solid #fd7e14;
+    box-shadow: 0 8px 25px rgba(253, 126, 20, 0.3);
+    background-color: #fff8f0;
+}
+
+/* Shopping List */
+#shoppingList .list-group-item {
+  background: #f0f7f2;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#shoppingList .list-group-item:hover {
+  background: #f0f7f2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Recipe Cards */
+.recipe-card {
+  background: #afd8af;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+.recipe-card img {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  height: 180px; 
+  object-fit: cover;
+}
+.recipe-card .btn{
+  background-color: #fd7e14;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top:20px;
+  padding: 12px;
+  border: none;
+  transition: background 0.3s ease;
+}
+.recipe-card .btn:hover{
+  background-color: var(--secondary);
+  color: #fff;
+}
+.recipe-modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 999;
+}
+.recipe-modal .modal-content {
+  background: #afd8af;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: center;
+}
+.recipe-modal button {
+  background-color: #fd7e14;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* Logout Button */
+.logout-btn {
+  border-radius: 10px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.logout-btn:hover {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+
+/* dark mode section  */
+
+.dark-mode {
+  background-color: #121212c8 !important; /* main page background */
+  color: #e0e0e0 !important; /* main text color */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar and Footer */
+.dark-mode .navbar{
+  background-color: #2E7D32;
+}
+.dark-mode footer {
+  background-color: #1a1a1a !important; /* slightly lighter than page for separation */
+  color: #e0e0e0 !important;
+}
+
+/* Section backgrounds */
+.dark-mode .features,
+.dark-mode .how-it-works,
+.dark-mode .testimonials{
+  background-color: #2a2a2ad7;
+  color:#dcdcdc;
+}
+
+/* Cards, toggles, planner days */
+.dark-mode .features .card{
+  background-color: #afd8af;
+}
+.dark-mode .card,
+.dark-mode .faq-item,
+.dark-mode .planner-day{
+  background-color: #afd8af !important; 
+  color: #f8f9fa !important; 
+  border: 1px solid #333 !important; 
+  transition: background 0.3s, color 0.3s;
+} 
+.dark-mode .testimonials p{
+  color:white;
+}
+
+/* Buttons */
+.dark-mode button,
+.dark-mode .btn {
+  background-color: #333 !important;
+  color: #fff !important;
+  border: 1px solid #444 !important;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode button:hover,
+.dark-mode .btn:hover {
+  background-color: #555 !important; /* hover accent */
+}
+
+/* Inputs and textareas */
+.dark-mode input, 
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #1a1a1a95 !important;
+  color: #ad9e9e !important;
+  border: 1px solid #555 !important;
+}
+
+.dark-mode #aboutIntro ,
+.dark-mode #mission,
+.dark-mode #why,
+.dark-mode #team,
+.dark-mode .faq{ 
+  background-color: #2a2a2ad7;
+  border-radius: 12px;
+}
+.dark-mode #aboutIntro p,
+.dark-mode #mission p,
+.dark-mode #why p,
+.dark-mode #team p{
+  color:white;
+}
+.dark-mode #why .card-body {
+  background-color: #afd8af;
+}
+.dark-mode #team .team-member{
+  background-color: #afd8af;
+}
+.dark-mode #team h5{
+  color:#f3efef;
+}
+
+/* FAQ toggle active state */
+.dark-mode .faq-item.active {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
+}
+.dark-mode .form-label{
+  color: #f3efef
+}
+/* Highlighted meal card */
+.dark-mode .meal-card.highlighted {
+  background-color: #2a2a2a !important;
+  border-color: #4db6ac !important;
+  color: #fff !important;
+}
+.dark-mode .features .card {
+  background-color: #afd8af;
+}
+
+
+
+/* if any error message  */
+.text-danger {
+  font-size: 0.9rem;
+}
+/* back to top  */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: var(--secondary);
+}

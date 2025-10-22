@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Chicken Stir Fry",
+    "image": "./images/Chicken Stir Fry in Wok.jpeg",
+    "details": "Ingredients: Chicken, Bell Peppers, Broccoli, Soy Sauce.<br>Steps: Stir-fry chicken until cooked. Add veggies and sauce. Cook for 5–7 minutes."
+  },
+  {
+    "id": 2,
+    "title": "Greek Salad",
+    "image": "./images/Perfect for summer Greek salad 🥗.jpeg",
+    "details": "Ingredients: Tomato, Cucumber, Feta, Olive Oil, Olives.<br>Steps: Chop vegetables, mix with feta and olives, drizzle olive oil."
+  },
+  {
+    "id": 3,
+    "title": "Pasta Alfredo",
+    "image": "./images/Cajun Chicken Alfredo Fettuccine – Spicy & Cheesy Comfort Pasta.jpeg",
+    "details": "Ingredients: Pasta, Cream, Parmesan, Garlic.<br>Steps: Cook pasta, prepare sauce with cream and cheese, mix together."
+  },
+  {
+    "id": 4,
+    "title": "Veggie Omelette",
+    "image": "./images/Easy Masala Omelette Recipe - Spiced Eggs with Veggies.jpeg",
+    "details": "Ingredients: Eggs, Bell Peppers, Onions, Spinach.<br>Steps: Beat eggs, pour into pan, add veggies, cook until set."
+  },
+  {
+    "id": 5,
+    "title": "Smoothie Bowl",
+    "image": "./images/Healthy Smoothie Bowl with Fresh Fruits.jpeg",
+    "details": "Ingredients: Banana, Berries, Yogurt, Granola.<br>Steps: Blend fruits with yogurt, pour into a bowl, top with granola."
+  },
+  {
+    "id": 6,
+    "title": "Curry Rice",
+    "image": "./images/curry rice.jpeg",
+    "details": "Ingredients: Rice, Curry Powder, Vegetables, Coconut Milk.<br>Steps: Cook rice, prepare curry with vegetables and coconut milk, mix together."
+  },
+  {
+    "id": 7,
+    "title": "Avocado Toast",
+    "image": "./images/avocado toast.jpeg",
+    "details": "Ingredients: Bread, Avocado, Lemon, Salt, Pepper.<br>Steps: Toast bread, mash avocado with lemon and seasoning, spread on toast."
+  },
+  {
+    "id": 8,
+    "title": "Chocolate Chip Pancakes",
+    "image": "./images/The Best Chocolate Chip Pancakes.jpeg",
+    "details": "Ingredients: Flour, Milk, Eggs, Chocolate Chips, Sugar.<br>Steps: Mix ingredients, cook on a skillet, serve with syrup."
+  },
+  {
+  "id": 9,
+  "title": "Mango Sushi Rolls",
+  "image": "./images/mango sushi rolls.jpeg",
+  "details": "Ingredients: Mango slices, sticky rice, coconut milk, seaweed sheets.<br>Steps: Spread rice on seaweed, add mango strips, roll tightly, slice and serve with a drizzle of honey or coconut sauce."
+  } 
+]
+
